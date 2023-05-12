@@ -4,7 +4,7 @@ import { useSelector } from "react-redux"
 import { Input, SubItemAdd, SubModelAdd, GoBack, LineButton } from "../components"
 import icons from "../constants/icons"
 import { FONTS, SIZES } from "../constants/theme"
-import logo from '../assets/ic_launcher.png'
+import logo from '../assets/ic_launcher.jpg'
 
 const About = ({ navigation }) => {
     const { theme } = useSelector(state => state.local);
@@ -42,84 +42,75 @@ const About = ({ navigation }) => {
     })
 
     return (
-    <View style={style.container}>
-        <StatusBar
-            backgroundColor="rgba(0,0,0,0.25)"
-            translucent={true}
-            barStyle="light-content"
-        />
-        <GoBack navigation={navigation} />
-        <View style={style.body}>
-            <View style={{
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-            }}>
-                <Image
-                    source={logo}
-                    style={style.icon}
-                />
-                <Text style={style.textMain}>cyclepay</Text>
-                <Text style={style.textSecondary}>
-                    Version 0.0.1
-                </Text>
-                {/* <Text style={{...FONTS.body4, textAlign:'center'}}>
+        <View style={style.container}>
+            <StatusBar
+                backgroundColor="rgba(0,0,0,0.25)"
+                translucent={true}
+                barStyle="light-content"
+            />
+            <GoBack navigation={navigation} />
+            <View style={style.body}>
+                <View style={{
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}>
+                    <Image
+                        source={logo}
+                        style={style.icon}
+                    />
+                    <Text style={style.textMain}>Expeses Tracker</Text>
+                    <Text style={style.textSecondary}>
+                        Version 0.0.1
+                    </Text>
+                    {/* <Text style={{...FONTS.body4, textAlign:'center'}}>
                     This app lets you keep track of your subscriptions and other expenses.
                 </Text> */}
-            </View>
-            <View style={style.pt}>
-                <Text style={[style.textMain, style.px]}>
-                    Links
-                </Text>
-                <View style={style.ptSm}>
-                    <LineButton
-                        label="View Source Code (GitHub)"
-                        onPress={async () => {
-                            await Linking.openURL('https://github.com/BohdanKhv/subscriptions-manager-react-native')
-                        }}
-                        containerStyle={{
-                            paddingVertical: 0
-                        }}
-                    />
                 </View>
-            </View>
-            <View style={style.pt}>
-                <Text style={[style.textMain, style.px]}>
-                    Developed by
-                </Text>
-                <View style={style.ptSm}>
-                    <LineButton
-                        label="Bohdan Khvorostovskyi"
-                        onPress={async () => {
-                            await Linking.openURL('https://github.com/BohdanKhv')
-                        }}
-                        containerStyle={{
-                            paddingVertical: 0
-                        }}
-                    />
+                <View style={style.pt}>
+                    <Text style={[style.textMain, style.px]}>
+                        Links
+                    </Text>
+                    <View style={style.ptSm}>
+                        <LineButton
+                            label="View Source Code (GitHub)"
+                            onPress={async () => {
+                                await Linking.openURL('https://github.com/Praveenverma1510/expensesTracker')
+                            }}
+                            containerStyle={{
+                                paddingVertical: 0
+                            }}
+                        />
+                    </View>
                 </View>
-            </View>
-            <View style={style.pt}>
-                <Text style={[style.textMain, style.px]}>
-                    About
-                </Text>
-                <View style={style.ptSm}>
-                    <Text style={[style.px, {...FONTS.body4, color: theme.textDark}]}>
-                        This app lets you keep track of your subscriptions and other expenses.
+                <View style={style.pt}>
+                    <Text style={[style.textMain, style.px]}>
+                        Developed by
                     </Text>
-                    <Text style={[style.px, style.ptSm, {...FONTS.body4, color: theme.textDark}]}>
-                        It is an open source project, so feel free to use it as you wish, if you find it useful.
+                    <View style={style.ptSm}>
+                        <LineButton
+                            label="Praveen Verma"
+                            onPress={async () => {
+                                await Linking.openURL('https://github.com/Praveenverma1510')
+                            }}
+                            containerStyle={{
+                                paddingVertical: 0
+                            }}
+                        />
+                    </View>
+                </View>
+                <View style={style.pt}>
+                    <Text style={[style.textMain, style.px]}>
+                        About
                     </Text>
-                    <Text style={[style.px, {...FONTS.body4, color: theme.textDark}]}>
-                        Feel free to contribute to the project.
-                    </Text>
-                    <Text style={[style.px, style.ptSm, {...FONTS.body4, color: theme.textDark}]}>
-                        For any questions, suggestions or bug reports, please contact me via email or GitHub.
-                    </Text>
+                    <View style={style.ptSm}>
+                        <Text style={[style.px, { ...FONTS.body4, color: theme.textDark }]}>
+                            This app lets you keep track of your subscriptions and other expenses.
+                        </Text>
+                    </View>
                 </View>
             </View>
         </View>
-    </View>
     )
 }
 

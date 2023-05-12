@@ -94,7 +94,7 @@ const Settings = ({ navigation }) => {
         // const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE);
 
         // if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-            const path = `${rnfs.DocumentDirectoryPath}/cyclepay.json`;
+            const path = `${rnfs.DocumentDirectoryPath}`;
 
             rnfs.readFile(path, 'utf8')
             .then((data) => {
